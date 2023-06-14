@@ -1,0 +1,33 @@
+{{ template "head" . }}
+
+<section style="max-width:500px" class="container-fluid">
+
+
+    <form method="post" role="form">
+
+
+	<h2>{{ .PageTitle }}</h2>
+
+        <hr />
+
+		<div class="button-container">
+			<form action="/handle-button" method="post">
+				<button type="submit" name="button" value="startGameButton">Starta</button>
+			</form>
+        </div>
+
+		<hr />
+
+		<h2>{{ .Result }}</h2>
+		<h2>{{ .History }}</h2>
+
+	</form>
+
+</section>
+
+
+
+	
+
+
+{{ template "footer" . }}

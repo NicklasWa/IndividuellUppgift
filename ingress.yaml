@@ -1,0 +1,49 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  namespace: yatest
+  name: sites
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+    - host: "hockey11111.chickenkiller.com"
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: staticwebserver-service
+                port:
+                  number: 80
+    - host: "yatesthello.mooo.com"
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: site2-service
+                port:
+                  number: 80
+    - host: "pythonhellostefan.strangled.net"
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: pythonapi-service
+                port:
+                  number: 80
+    - host: "python0515.chickenkiller.com"
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: gosite-service
+                port:
+                  number: 80

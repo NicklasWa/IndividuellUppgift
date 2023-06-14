@@ -1,0 +1,26 @@
+{{ template "head" . }}
+
+<section style="max-width:500px" class="container-fluid">
+
+
+    <form method="post" role="form">
+
+	<h2>{{ .PageTitle }}</h2>
+
+	<hr />
+
+        <button name="button" type="submit" value="playAgainButton">Spela igen</button>
+
+		<h2>{{ .Result }}</h2>
+		<h2>{{ .History }}</h2>
+
+    </form>
+
+</section>
+
+
+
+	
+
+
+{{ template "footer" . }}
